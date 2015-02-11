@@ -54,6 +54,7 @@ describe('Client',function(){
         it('should be able to get that specific document with the big-long unchange and in full glory',function(done){
       // note that by default the /get handler will have omitHeader=true configured on the server!
             client.realTimeGet(id,{omitHeader: false}, function(err,data){
+              console.trace(err);
                 sassert.ok(err,data);
                 assert.equal(data.response.numFound, 1, 'Added document should be retrieved in real-time get.');
                 var retrieved = data.response.docs[0];

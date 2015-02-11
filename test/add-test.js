@@ -22,6 +22,8 @@ describe('Client',function(){
 				title_t : 'title1'
 			};
 			client.add(doc,function(err,data){
+              console.log(err);
+              console.log(data);
 				sassert.ok(err,data);
 				done();
 			});
